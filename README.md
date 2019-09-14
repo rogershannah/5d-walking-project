@@ -1,6 +1,3 @@
-# 5d-walking-project
-https://github.com/rogershannah/
-
 Welcome to my 5d Walking Project
 ================================
 

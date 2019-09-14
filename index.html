@@ -1,0 +1,28 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+    <script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script> 
+    <script src="myfont.typeface.js"></script> 
+  </head>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+    </a-assets>
+    
+    <a-scene embedded artoolkit="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+      
+      <a-sound src="src: url(https://cdn.glitch.com/ac27f577-fc91-432e-b331-fd83c8982fde%2Fclick_120bpm_4-4time_301beats_stereo_tb5aUa.mp3?1540987157242)" autoplay="true" position="0 2 5"></a-sound>
+
+  	  <a-marker preset="hiro">
+        <a-entity text-geometry="value: 20; font: #optimerBoldFont"></a-entity>
+  	  </a-marker>
+      <a-marker preset="kanji">
+        <a-entity text-geometry="value: 16; font: #optimerBoldFont"></a-entity>
+      </a-marker>
+  	  <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
